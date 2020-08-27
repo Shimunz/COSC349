@@ -22,16 +22,16 @@
     <p>Please select the timezones you would like to convert below:</p>
     <form action="/index.php">
 
-      <input type="text" id="name" name="name">
+      <input type="time" id="time" name="time" placeholder="Select the desired time" required><br>
       
-      <input class="dropdowns" list="timezones" placeholder="Select your timezone from the dropdown below">
+      <input class="dropdowns" list="timezones" placeholder="Select your timezone from the dropdown below" required><br>
       <datalist id="timezones">
         <option value="NZT">
         <option value="GMT">
         <option value="PST">
       </datalist>
 
-      <input class="dropdowns" list="timezones" placeholder="Select your timezone">
+      <input class="dropdowns" list="timezones" placeholder="Select your timezone" required><br>
       <datalist id="timezones">
         <option value="NZT">
         <option value="GMT">
