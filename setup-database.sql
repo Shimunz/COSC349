@@ -1,8 +1,8 @@
-CREATE TABLE papers (
-code varchar(7),
-name varchar(50) NOT NULL,
-PRIMARY KEY (code)
+CREATE TABLE timezones (
+USERID varchar(12) PRIMARY KEY,
+TIMECONVERT time(fsp) NOT NULL,
+TZFROM varchar(4) NOT NULL,
+TZTO varchar(4) NOT NULL,XS
 );
 
-INSERT INTO papers VALUES ('COSC326','Effective Programming');
-INSERT INTO papers VALUES ('COSC349','Cloud Computing Architecture');
+INSERT INTO timezones VALUES ('USERID', 'TIMECONVERT', 'TZFROM', 'TZTO');

@@ -699,16 +699,95 @@ ubuntu-xenial login: ci-info: no authorized SSH keys fingerprints found for user
 <14>Aug 27 02:58:23 ec2: #############################################################
 <14>Aug 27 02:58:23 ec2: -----BEGIN SSH HOST KEY FINGERPRINTS-----
 <14>Aug 27 02:58:23 ec2: 1024 SHA256:40r3bR0n0IYNAQ5MdSQII00ELbGC6IhU00lk7b2juUY root@ubuntu-xenial (DSA)
-<14>Aug 27 02:58:23 ec2: 256 SHA256:kLNKEtxJ74SlU1+51Ri8gM871y8lNU9OvL9OVaXR7VA root@ubuntu-xenial (ECDSA)
-<14>Aug 27 02:58:23 ec2: 256 SHA256:0Sdzv7yqcral9Upnz4ebu6fhkoQ9kAMRDqRhyqnn/uA root@ubuntu-xenial (ED25519)
-<14>Aug 27 02:58:23 ec2: 2048 SHA256:rqtth+7DNuacHzNVNjfouLws2KTRnqhUspdMwqWqQNc root@ubuntu-xenial (RSA)
-<14>Aug 27 02:58:23 ec2: -----END SSH HOST KEY FINGERPRINTS-----
-<14>Aug 27 02:58:23 ec2: #############################################################
+<14>Aug HOST KEY FINGERPRINTS-----
+<14>Aug 26 04:53:25 ec2: #############################################################
 -----BEGIN SSH HOST KEY KEYS-----
-ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBF9qyAqgcgj5t2aXpKUQUvc3cSpoxl9JTLjpcFFDkMEDjKx5eIw0vIZ8ufU6mqABsLjky81fYsyByF0/T7WalYE= root@ubuntu-xenial
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG7/zZbd2TKnopQDkl+Ci5LKe9Hcm8l3ZksHOvd3nrbN root@ubuntu-xenial
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDnIg6neotFmZ99A8cPOR9fADVZcuCknmfMWS84E6juVANcosPODmOoo8yuvYOJUQpd0gBn0G4lZzzAiEdEGmv+iENg0DEixf56NOzuZR++sh/AUt7/RT+EeYdZHQPe1/vXjhzuyfbv8elSNrci31V4hPyHbb+FA+/yZmf8R2TJ//u7ksDLz5YYW58qbZkPIZ1cOHcTk/PfZsARVcx4g9+M22QkXqod48PSyddXerFupnbaX5GsIJbS4IcQ5EvS8LHuB/z8xNj5b4beeEfxL6/ej2DHewCqAG3GXh01xUuUAfMuYFP3z+Ve8WkgrfBgrneNCT23pp0v8SSfifkC1Ee1 root@ubuntu-xenial
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL4Y/wIXlbphUzNHoBxN2xx8g8Zo8oS9K5u7ZlhQJ7RsbyJEloqbYYqjodAGPjVB3p5PpcZmpO5RwTmz46AW2g0= root@ubuntu-xenial
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJQo3TZExiRyjlNGK83fwcEKPOmmR3Ujbxk/D5hyY72k root@ubuntu-xenial
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyKQYKnQnGgHhklutjaGf6YqG70J/+c0nJT6zpt6y3BpadLvFOUeHs3b28Td5Cd7ZiWwS1ZHFw+CG82iucoaGSzPAyOMxl4SVICsE2xPze8WzPafNtQypOnw6hA1KKUN8dNgwAaFZYlKKSvbT8IrSvudGLOe11ImWw6hFJQL4LtU/5DCX/UG9swe67UamxhwiHaOUGhDDf/cO0y70Xq9AvWs4xGBJUxOExGBVEo8PdMYrTNjbzQC2rn1nES1QLz5eQjBsl0e+0HpIvyFSXxGAgXO7Hc24Xvy5+/RuVwiw4gnh/z8xS54GjhtLLOdKKu8AmGJXtZMoCAk+sjZovXqOn root@ubuntu-xenial
 -----END SSH HOST KEY KEYS-----
-[   62.776759] cloud-init[1855]: Cloud-init v. 20.2-45-g5f7825e2-0ubuntu1~16.04.1 running 'modules:final' at Thu, 27 Aug 2020 02:58:23 +0000. Up 62.67 seconds.
-[   62.776938] cloud-init[1855]: ci-info: no authorized SSH keys fingerprints found for user ubuntu.
-[   62.777035] cloud-init[1855]: Cloud-init v. 20.2-45-g5f7825e2-0ubuntu1~16.04.1 finished at Thu, 27 Aug 2020 02:58:23 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 62.77 seconds
+[   67.931008] cloud-init[1515]: Cloud-init v. 20.2-45-g5f7825e2-0ubuntu1~16.04.1 running 'modules:final' at Wed, 26 Aug 2020 04:53:25 +0000. Up 67.82 seconds.
+[   67.931167] cloud-init[1515]: ci-info: no authorized SSH keys fingerprints found for user ubuntu.
+[   67.931269] cloud-init[1515]: Cloud-init v. 20.2-45-g5f7825e2-0ubuntu1~16.04.1 finished at Wed, 26 Aug 2020 04:53:25 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 67.92 seconds
+
+Ubuntu 16.04.6 LTS ubuntu-xenial ttyS0
+
+ubuntu-xenial login: [87433.873926] blk_update_request: critical medium error, dev sda, sector 276296
+[87434.091030] blk_update_request: critical medium error, dev sda, sector 276296
+[88671.625820] blk_update_request: critical medium error, dev sda, sector 16128
+[88671.626664] blk_update_request: critical medium error, dev sda, sector 16136
+[88671.665287] blk_update_request: critical medium error, dev sda, sector 16144
+[88671.666075] blk_update_request: critical medium error, dev sda, sector 16152
+[88671.731682] blk_update_request: critical medium error, dev sda, sector 16160
+[88671.883533] blk_update_request: critical medium error, dev sda, sector 16168
+[88672.099993] blk_update_request: critical medium error, dev sda, sector 16176
+[88672.273401] blk_update_request: critical medium error, dev sda, sector 16184
+[88672.484480] blk_update_request: critical medium error, dev sda, sector 16192
+[88672.697721] blk_update_request: critical medium error, dev sda, sector 16200
+[88672.914678] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #25949: block 1782: comm php7.0: unable to read itable block
+[88672.986577] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[88672.987946] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #25948: block 1782: comm php7.0: unable to read itable block
+[88673.006960] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[88673.031618] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #26042: block 17[89368.518296] blk_update_request: critical medium error, dev sda, sector 4160
+[89369.172048] blk_update_request: critical medium error, dev sda, sector 4168
+[89369.385431] blk_update_request: critical medium error, dev sda, sector 4176
+[89369.599143] blk_update_request: critical medium error, dev sda, sector 4184
+[89369.814655] blk_update_request: critical[92399.224565] blk_update_request: critical medium error, dev sda, sector 16128
+[92399.341523] blk_update_request: critical medium error, dev sda, sector 16136
+[92399.342420] blk_update_request: critical medium error, dev sda, sector 16144
+[92399.382499] blk_update_request: critical medium error, dev sda, sector 16152
+[92399.383444] blk_update_request: critical medium error, dev sda, sector 16160
+[92399.384367] blk_update_request: critical medium error, dev sda, sector 16168
+[92399.385261] blk_update_request: critical medium error, dev sda, sector 16176
+[92399.505284] blk_update_request: critical medium error, dev sda, sector 16184
+[92399.525922] blk_update_request: critical medium error, dev sda, sector 16192
+[92399.526849] blk_update_request: critical medium error, dev sda, sector 16200
+[92399.649080] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #25963: block 1783: comm apt-config: unable to read itable block
+[92399.650718] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[92399.652383] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #25962: block 1783: comm apt-config: unable to read itable block
+[92399.690465] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[92399.692220] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #25967: block 1783: comm apt-config: unable to read itable block
+[92400.406229] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[92401.195129] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #25966: block 1783: comm apt-config: unable to read itable block
+[92401.198088] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[92401.541686] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #25986: block 1785: comm apt-config: unable to read itable block
+[92402.770750] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[93234.858689] blk_update_request: critical medium error, dev sda, sector 296216
+[93235.076341] blk_update_request: critical medium error, dev sda, sector 296216
+[93235.292429] blk_update_request: critical medium error, dev sda, sector 476600
+[93235.302916] blk_update_request: critical medium error, dev sda, sector 476600
+[93235.306127] blk_update_request: critical medium error, dev sda, sector 1385784
+[93235.307524] blk_update_request: critical medium error, dev sda, sector 1385784
+[93235.533903] blk_update_request: critical medium error, dev sda, sector 16128
+[93235.750494] blk_update_request: critical medium error, dev sda, sector 16136
+[93235.967233] blk_update_request: critical medium error, dev sda, sector 16144
+[93236.175586] blk_update_request: critical medium error, dev sda, sector 16152
+[93236.392198] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #26008: block 1786: comm mandb: unable to read itable block
+[93236.516613] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[93236.680371] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #26006: block 1786: comm mandb: unable to read itable block
+[93236.682244] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[93236.772523] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #26022: block 1787: comm mandb: unable to read itable block
+[93238.051402] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[93238.831489] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #26021: block 1787: comm mandb: unable to read itable block
+[93240.006671] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+86: comm cron: unable to read itable block
+[89384.187215] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[93450.594341] blk_update_request: critical medium error, dev sda, sector 296688
+[93450.651809] blk_update_request: critical medium error, dev sda, sector 296688
+[93450.693076] blk_update_request: critical medium error, dev sda, sector 296632
+[93450.886955] blk_update_request: critical medium error, dev sda, sector 296632
+[93450.888450] blk_update_request: critical medium error, dev sda, sector 296656
+[93451.030509] blk_update_request: critical medium error, dev sda, sector 296656
+[93451.032140] blk_update_request: critical medium error, dev sda, sector 296608
+[93451.122836] blk_update_request: critical medium error, dev sda, sector 296608
+[93451.829191] blk_update_request: critical medium error, dev sda, sector 296640
+[93452.050977] blk_update_request: critical medium error, dev sda, sector 296640
+[93452.276332] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #12061: block 914: comm cmp: unable to read itable block
+[93452.504890] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[93452.506239] EXT4-fs error (device sda1): ext4_find_entry:1457: inode #12226: comm cmp: reading directory lblock 0
+[93452.547471] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #2017: block 287: comm cp: unable to read itable block
+[93452.576906] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[93452.638478] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #1945: block 282: comm cp: unable to read itable block
+[93452.699776] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
+[93452.761140] EXT4-fs error (device sda1): __ext4_get_inode_loc:4128: inode #1944: block 282: comm cp: unable to read itable block
+[93452.812292] EXT4-fs error (device sda1) in ext4_reserve_inode_write:5216: IO failure
