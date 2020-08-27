@@ -1,8 +1,8 @@
 CREATE TABLE timezones (
 USERID varchar(12) PRIMARY KEY,
-TIMECONVERT time(fsp) NOT NULL,
 TZFROM varchar(4) NOT NULL,
-TZTO varchar(4) NOT NULL,XS
+TZTO varchar(4) NOT NULL
 );
 
-INSERT INTO timezones VALUES ('USERID', 'TIMECONVERT', 'TZFROM', 'TZTO');
+INSERT INTO timezones (USERID, TZFROM, TZTO) VALUES
+       ('tvarsanyi', 'NZT', 'PST');
