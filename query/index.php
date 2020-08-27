@@ -7,7 +7,8 @@ th { text-align: left; }
 </head>
 
 <body>
-<h1>World Timezone Converters</h1>
+<h1>Timezone Conversion Results</h1>
 <p>Query</p>
+<a class="queryresults" href="http://192.168.10.11">Timezone Form</a>
 </body>
 </html>
