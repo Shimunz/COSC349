@@ -3,13 +3,43 @@
 <head><title>World Timezone Converter</title>
   <style>
     th { text-align: left; }
+
+    .dropdowns {
+    }
 </style>
 </head>
 
 <body>
   <h1>World Timezone Converter</h1>
-  <p>The current local time is:</p>
 
+  <?php
+   date_default_timezone_set("Pacific/Auckland");
+   echo "The current time is " . date("h:i:sa") . " in your local timezone (New Zealand - NZT).";
+   ?>
+  
+
+  <div class="container">
+    <p>Please select the timezones you would like to convert below:</p>
+    <form action="/index.php">
+
+      <input type="text" id="name" name="name">
+      
+      <input class="dropdowns" list="timezones" placeholder="Select your timezone from the dropdown below">
+      <datalist id="timezones">
+        <option value="NZT">
+        <option value="GMT">
+        <option value="PST">
+      </datalist>
+
+      <input class="dropdowns" list="timezones" placeholder="Select your timezone">
+      <datalist id="timezones">
+        <option value="NZT">
+        <option value="GMT">
+        <option value="PST">
+      </datalist>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
   <a class="queryresults" href="http://192.168.10.13">Query Results</a>
 </body>
 </html>
