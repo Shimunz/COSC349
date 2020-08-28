@@ -34,12 +34,12 @@
       <label for="tzconvert">Username</label>
       <input class="usernames" type="text" id="user" name="user" placeholder="e.g. tvarsanyi" required><br>
 
-      <label for="tzconvert">Timezone to convert to (click to select from dropdown)</label>
-      <input class="dropdowns" list="timezones" name="tzTO" placeholder="e.g. GMT" required><br>
+      <label for="tzconvert">Your Country (please select from the dropdown)</label>
+      <input class="dropdowns" list="timezones" name="tzTO" placeholder="e.g. AU" required><br>
       <datalist id="timezones">
-        <option value="GMT">
-        <option value="PST">
-        <option value="SGT">
+        <option value="NZ">
+        <option value="AU">
+        <option value="GB">
       </datalist>
       <input type="submit" value="Submit">
     </form>
@@ -56,18 +56,6 @@
   $db_passwd = 'insecure_db_pw';
   $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
   $pdo = new PD0($pdo_dsn, $db_user, $db_passwd);
-
-
-  if ($tzTO == "GMT"){
-  $gmt = file_get_contents("http://192.168.10.13?timezone=gmt");
-  $q = $pdo->query("UPDATE timezones SET TZTO = 'GMT' WHERE USERID='user'");
-  } else if ($tzTO == "PST"){
-  $pst = file_get_contents("http://192.168.10.13?timezone=pst");
-  $q = $pdo->query("UPDATE timezones SET TZTO = 'PST' WHERE USERID='user'");
-  } else if ($tzTO == "SGT"){
-  $sgt = file_get_contents("http://192.168.10.13?timezone=sgt");
-  $q = $pdo->query("UPDATE timezones SET TZTO = 'SGT' WHERE USERID='user'");
-  }
   ?>
   
 </body>
