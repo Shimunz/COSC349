@@ -15,12 +15,22 @@
   <?php
    date_default_timezone_set("Pacific/Auckland");
    $NZT = date("h:i:sa d/m/yy");
-   echo "The current time is " . $NZT . " in your local timezone (New Zealand - NZT).";
+   echo "The current time is " . $NZT . " in your local timezone (New Zealand - NZT)." . "<br>";
+	
+
+	$timeZones = DateTimeZone::listIdentifiers(DateTimeZone::PER_COUNTRY, 'NZ');
+	foreach ( $timeZones as $key => $zoneName )
+	{
+		$dt = new DateTime();
+		$tz = new DateTimeZone($zoneName);	
+		$dt->setTimezone($tz);
+		echo($zoneName . " = " . $dt->format('H:i:s') . "<br>");
+	} 
    ?>
  
   <div class="container">
     <p>Please select the timezones you would like to convert below:</p>
-    <form action="index.php">
+    <form action="index.php" method="post">
       <label for="tzconvert">Username</label>
       <input class="usernames" type="text" id="user" name="user" placeholder="e.g. tvarsanyi" required><br>
 
