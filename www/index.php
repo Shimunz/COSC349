@@ -27,9 +27,9 @@
       <label for="tzconvert">Timezone to convert to (click to select from dropdown)</label>
       <input class="dropdowns" list="timezones" name="tzTO" placeholder="e.g. GMT" required><br>
       <datalist id="timezones">
-        <option value="NZT">
         <option value="GMT">
         <option value="PST">
+        <option value="SGT">
       </datalist>
       <input type="submit" value="Submit">
     </form>
@@ -40,13 +40,24 @@
   <?php
   $user = $_POST['user'];
   $tzTO = $_POST['tzTO'];
-
   $db_host = '192.168.10.12';
   $db_name = 'fvision';
   $db_user = 'webuser';
   $db_passwd = 'insecure_db_pw';
   $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
   $pdo = new PD0($pdo_dsn, $db_user, $db_passwd);
+
+
+  if ($tzTO == "GMT"){
+  $gmt = file_get_contents("http://192.168.10.13?timezone=gmt");
+  $q = $pdo->query("UPDATE timezones SET TZTO = 'GMT' WHERE USERID='user'");
+  } else if ($tzTO == "PST"){
+  $pst = file_get_contents("http://192.168.10.13?timezone=pst");
+  $q = $pdo->query("UPDATE timezones SET TZTO = 'PST' WHERE USERID='user'");
+  } else if ($tzTO == "SGT"){
+  $sgt = file_get_contents("http://192.168.10.13?timezone=sgt");
+  $q = $pdo->query("UPDATE timezones SET TZTO = 'SGT' WHERE USERID='user'");
+  }
   ?>
   
 </body>
