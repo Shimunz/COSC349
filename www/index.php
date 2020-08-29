@@ -45,7 +45,7 @@
     </form>
   </div>
 
-  <a class="queryresults" href="http://192.168.10.13">Query Results</a>
+  <a class="queryresults" href="http://192.168.10.13/query.php">Query Results</a>
 
   <?php
   $user = $_POST['user'];
