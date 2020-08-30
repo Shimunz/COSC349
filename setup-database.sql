@@ -1,7 +1,8 @@
 CREATE TABLE timezones (
-USERID varchar(12) PRIMARY KEY,
-TZTO varchar(4) NOT NULL
+UserID varchar(20) PRIMARY KEY,
+Timezone varchar(6) NOT NULL
 );
 
-INSERT INTO timezones (USERID, TZTO) VALUES
-       ('tvarsanyi', 'PST');
+INSERT INTO timezones (UserID, Timezone) VALUES
+       ('tvarsanyi', 'AU'),
+       ('checkthis', 'GB');

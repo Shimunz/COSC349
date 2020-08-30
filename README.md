@@ -1,5 +1,3 @@
-COSC349
+COSC349 Assignment 1
 
-Stuff
-
-HALP
+NZ to World Timezone Converter

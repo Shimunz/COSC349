@@ -72,7 +72,7 @@ Vagrant.configure("2") do |config|
       apt-get update
       
       # We create a shell variable MYSQL_PWD that contains the MySQL root password
-      export MYSQL_PWD='insecure_mysqlroot_pw'
+      export MYSQL_PWD='password123'
 
       # If you run the `apt-get install mysql-server` command
       # manually, it will prompt you to enter a MySQL root
@@ -89,24 +89,24 @@ Vagrant.configure("2") do |config|
 
       # Run some setup commands to get the database ready to use.
       # First create a database.
-      echo "CREATE DATABASE fvision;" | mysql
+      echo "CREATE DATABASE 349asgn1;" | mysql
 
       # Then create a database user "webuser" with the given password.
-      echo "CREATE USER 'webuser'@'%' IDENTIFIED BY 'insecure_db_pw';" | mysql
+      echo "CREATE USER 'webuser'@'%' IDENTIFIED BY 'password123';" | mysql
 
       # Grant all permissions to the database user "webuser" regarding
-      # the "fvision" database that we just created, above.
-      echo "GRANT ALL PRIVILEGES ON fvision.* TO 'webuser'@'%'" | mysql
+      # the "349asgn1" database that we just created, above.
+      echo "GRANT ALL PRIVILEGES ON 349asgn1.* TO 'webuser'@'%'" | mysql
       
       # Set the MYSQL_PWD shell variable that the mysql command will
       # try to use as the database password ...
-      export MYSQL_PWD='insecure_db_pw'
+      export MYSQL_PWD='password123'
 
       # ... and run all of the SQL within the setup-database.sql file,
       # which is part of the repository containing this Vagrantfile, so you
       # can look at the file on your host. The mysql command specifies both
-      # the user to connect as (webuser) and the database to use (fvision).
-      cat /vagrant/setup-database.sql | mysql -u webuser fvision
+      # the user to connect as (webuser) and the database to use (349asgn1).
+      cat /vagrant/setup-database.sql | mysql -u webuser 349asgn1
 
       # By default, MySQL only listens for local network requests,
       # i.e., that originate from within the dbserver VM. We need to
