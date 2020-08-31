@@ -2,26 +2,30 @@
 <html>
 <head><title>NZ to World Timezone Converter</title>
 <style type="text/css">
-    th { text-align: left; }
-    
-    .container {
-		width: 250px;
-		clear: both;
-    }
-    
-    .boxes {
-    }
+  th { text-align: left; }
+  
+  body {
+      background-color: black;
+      color: white;
+  }
 
-	.container input {
-	  width: 100%;
-	  clear: both;
-	}
+  
+  .container {
+      display: inline-block;
+      text-align: right;
+    }
+  
+  .boxes {
+  }
+  .submit {
+  }
+
 </style>
 </head>
 
 <body>
   <h1>NZ to World Timezone Converter</h1>
-
+  
   <div class="intro">
   <?php
    date_default_timezone_set("Pacific/Auckland");
@@ -62,7 +66,7 @@
         <option value="NZ">New Zealand</option>
         <option value="US">United States</option>
       </datalist>
-      <input type="submit" value="Submit" name="submit">
+      <input type="submit" value="Submit" name="submit" style="width: 200px;">
     </form>
   </div>
   
@@ -86,7 +90,7 @@
    if (isset($_POST['submit'])){
    $url = "http://192.168.10.13/query.php?timezone=" . $Timezone;
    $qtz = file_get_contents($url);
-   echo "The timezones in  " . $Timezone . " are: " . "<br>" . $qtz;
+   echo "<br>" . "The timezones in  " . $Timezone . " are: " . "<br>" . $qtz;
 
         $link = mysqli_connect('192.168.10.12', 'webuser', 'password123', '349asgn1');
 
