@@ -1,5 +1,5 @@
 CREATE TABLE timezones (
-UserID varchar(20) PRIMARY KEY,
+UserID varchar(20) NOT NULL,
 Timezone varchar(6) NOT NULL
 );
 

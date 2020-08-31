@@ -5,33 +5,43 @@
     th { text-align: left; }
     
     .container {
+		width: 250px;
+		clear: both;
     }
     
     .boxes {
     }
+
+	.container input {
+	  width: 100%;
+	  clear: both;
+	}
 </style>
 </head>
 
 <body>
   <h1>NZ to World Timezone Converter</h1>
 
-  
+  <div class="intro">
   <?php
    date_default_timezone_set("Pacific/Auckland");
    $NZT = date("h:i:sa d/m/yy");
-   echo "The current time is " . $NZT . " in your local timezone (New Zealand - NZT)." . "<br>";
+   echo "The current time is " . $NZT . " in your local timezone (NZ)." . "<br>";
                                                                                             
   $nztz = file_get_contents("http://192.168.10.13/query.php?timezone=NZ");
   ?>
-                                                              
+	</div>       
+           
+	<p>Please select enter your username and the country which timezone(s) you wish to view below:</p>
+                                            
   <div class="container">
-    <p>Please select enter your username and the country which timezone(s) you wish to view below:</p>
+    
     <form action="index.php" method="post">
       <label for="user">Username:</label>
-      <input class="boxes" type="text" id="user" name="UserID" required><br>
+      <input class="boxes" type="text" id="user" name="UserID" placeholder="user" required><br>
                   
       <label for="country">Country:</label>
-      <input class="dropdown" list="countries" name="Timezone" required><br>
+      <input class="dropdown" list="countries" name="Timezone" placeholder="NZ" required><br>
       <datalist id="countries">
         <option value="AD">Andorra</option>
         <option value="AE">United Arab Emirates</option>
@@ -77,6 +87,23 @@
    $url = "http://192.168.10.13/query.php?timezone=" . $Timezone;
    $qtz = file_get_contents($url);
    echo "The timezones in  " . $Timezone . " are: " . "<br>" . $qtz;
+
+        $link = mysqli_connect('192.168.10.12', 'webuser', 'password123', '349asgn1');
+
+	if ($link->connect_error){
+		die("Connection failed: " . $link->connect_error);
+	}
+
+	$qsql = "SELECT * FROM timezones WHERE userid='" . $UserID . "'";
+	$result = $link->query($qsql);
+        echo "<br>". $UserID . " Search history" . "<br>";	
+	if ($result->num_rows > 0) {
+		while ($row = $result->fetch_assoc()) {
+			echo $row[Timezone] . "<br>";
+		}
+	} else {
+		echo "0 results";
+	}	
    }
    ?>
   
